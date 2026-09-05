@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class PersonalDashboard extends StatefulWidget {
-  const PersonalDashboard({super.key});
+class SettingsPage extends StatefulWidget {
+  const SettingsPage({super.key});
 
   @override
-  State<PersonalDashboard> createState() => _PersonalDashboardState();
+  State<SettingsPage> createState() => _SettingsPageState();
 }
 
-class _PersonalDashboardState extends State<PersonalDashboard> {
+class _SettingsPageState extends State<SettingsPage> {
   bool notificationsEnable = false;
   @override
   Widget build(BuildContext context) {

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_learning/projects/day_1_profile_card/ProfileCard.dart';
 
-class profile_card extends StatefulWidget {
-  const profile_card({super.key});
+class ProfileCard extends StatefulWidget {
+  const ProfileCard({super.key});
 
   @override
-  State<profile_card> createState() => _profile_cardState();
+  State<ProfileCard> createState() => _ProfileCardState();
 }
 
-class _profile_cardState extends State<profile_card> {
+class _ProfileCardState extends State<ProfileCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
