@@ -138,7 +138,7 @@ class _PersonalDashboardState extends State<PersonalDashboard> {
         child: Column(
           children: [
             const SizedBox(
-              height: 16,
+              height: 18,
             ),
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -165,15 +165,28 @@ class _PersonalDashboardState extends State<PersonalDashboard> {
                 )
               ],
             ),
-            SizedBox(
-              height: 16,
+            const SizedBox(
+              height: 24,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(16),
               child: Stack(
                 children: [
                   Image.asset("assets/dashboard_mountain_background.png"),
-                  Container(
-                    color: Colors.black.withOpacity(0.4),
+                  Positioned.fill(
+                    child: Container(
+                      color: Colors.black.withOpacity(0.2),
+                    ),
                   ),
-                  const Text("Stay focused, kepp learning, and never give up"),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 32, left: 18),
+                    child: Text(
+                      '"Stay focused,\n kepp learning,\n and never give up."',
+                      style: TextStyle(
+                          fontSize: 21,
+                          color: Color.fromARGB(255, 245, 241, 241)),
+                    ),
+                  ),
                 ],
               ),
             ),
