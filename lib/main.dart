@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_learning/projects/day_1_profile_card/ProfileCard.dart';
 // import 'package:flutter_learning/projects/day_2_settings_page/SettingsPage.dart';
-import 'package:flutter_learning/projects/day_3_personal_dashboard/personal_dashboard.dart';
+import 'package:flutter_learning/projects/day_3_personal_dashboard/PersonalDashboard.dart';
 
 void main() {
   runApp(const MyApp());
