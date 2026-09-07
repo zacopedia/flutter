@@ -423,7 +423,20 @@ class _PersonalDashboardState extends State<PersonalDashboard> {
         onPressed: () {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: const Text("Action added"),
+              content: Row(
+                children: [
+                  Container(
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(50)),
+                    color: const Color.fromARGB(255, 23, 135, 8),
+                    child: const Icon(
+                      Icons.check,
+                      color: Color(0xFFFFFFFF),
+                    ),
+                  ),
+                  const Text("Action added"),
+                ],
+              ),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)),
               behavior: SnackBarBehavior.floating,
