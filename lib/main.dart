@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/projects/day_4_user_information_app/day_4_user_information_app.dart';
 // import 'package:flutter_learning/projects/day_1_profile_card/ProfileCard.dart';
 // import 'package:flutter_learning/projects/day_2_settings_page/SettingsPage.dart';
-import 'package:flutter_learning/projects/day_3_personal_dashboard/PersonalDashboard.dart';
+// import 'package:flutter_learning/projects/day_3_personal_dashboard/PersonalDashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,6 @@ class _MyAppState extends State<MyApp> {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'zac',
-        home: PersonalDashboard());
+        home: UserInformationApp());
   }
 }

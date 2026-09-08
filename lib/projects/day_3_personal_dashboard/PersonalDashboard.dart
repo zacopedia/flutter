@@ -423,12 +423,14 @@ class _PersonalDashboardState extends State<PersonalDashboard> {
         onPressed: () {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
+              width: 250,
               content: Row(
                 children: [
                   Container(
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(50)),
-                    color: const Color.fromARGB(255, 23, 135, 8),
+                    margin: const EdgeInsets.only(right: 12),
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 54, 154, 18),
+                        borderRadius: BorderRadius.circular(50)),
                     child: const Icon(
                       Icons.check,
                       color: Color(0xFFFFFFFF),
@@ -440,7 +442,6 @@ class _PersonalDashboardState extends State<PersonalDashboard> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)),
               behavior: SnackBarBehavior.floating,
-              margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 1),
             ),
           );
         },
