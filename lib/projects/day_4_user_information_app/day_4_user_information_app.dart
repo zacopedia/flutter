@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 Map<String, dynamic> user = {
@@ -64,7 +66,7 @@ class _UserInformationAppState extends State<UserInformationApp> {
               ],
             ),
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
             Container(
               padding: const EdgeInsets.all(16),
@@ -105,7 +107,7 @@ class _UserInformationAppState extends State<UserInformationApp> {
                     ],
                   ),
                   const SizedBox(
-                    height: 12,
+                    height: 8,
                   ),
                   Row(
                     children: [
@@ -185,7 +187,7 @@ class _UserInformationAppState extends State<UserInformationApp> {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
             Container(
               padding: const EdgeInsets.all(16),
@@ -203,9 +205,9 @@ class _UserInformationAppState extends State<UserInformationApp> {
                       offset: const Offset(0, 2),
                     )
                   ]),
-              child: const Column(
+              child: Column(
                 children: [
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
@@ -244,13 +246,155 @@ class _UserInformationAppState extends State<UserInformationApp> {
                       )
                     ],
                   ),
-                  Row(
+                  const SizedBox(
+                    height: 4,
+                  ),
+                  Wrap(
+                    spacing: 4,
+                    runSpacing: 8,
                     children: [
-                      ElevatedButton(onPressed: onPressed, child: child)
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 9, vertical: 8),
+                        decoration: BoxDecoration(
+                            color: Colors.blue.shade50,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: const Text("JavaScript"),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 9, vertical: 8),
+                        decoration: BoxDecoration(
+                            color: Colors.blue.shade50,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: const Text("Dart"),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 9, vertical: 8),
+                        decoration: BoxDecoration(
+                            color: Colors.blue.shade50,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: const Text("Flutter"),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 9, vertical: 8),
+                        decoration: BoxDecoration(
+                            color: Colors.blue.shade50,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: const Text("HTML/CSS"),
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      width: 1,
+                      color: const Color.fromARGB(255, 240, 240, 240)),
+                  color: const Color.fromARGB(255, 254, 254, 254),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      blurRadius: 10,
+                      spreadRadius: 2,
+                      offset: const Offset(0, 2),
+                    )
+                  ],
+                  borderRadius: BorderRadius.circular(12)),
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(right: 12),
+                        child: Icon(
+                          Icons.school,
+                          size: 25,
+                          color: Color.fromARGB(255, 111, 106, 106),
+                        ),
+                      ),
+                      Text(
+                        "Eduction",
+                      ),
+                      SizedBox(
+                        width: 90,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(right: 12),
+                        child: Icon(
+                          Icons.location_city,
+                          size: 25,
+                          color: Color.fromARGB(255, 111, 106, 106),
+                        ),
+                      ),
+                      Text(
+                        "City",
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      SizedBox(
+                        width: 90,
+                      ),
+                      Text(
+                        "Algiers",
+                        style: TextStyle(fontSize: 16),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(right: 12),
+                        child: Icon(
+                          Icons.holiday_village,
+                          size: 20,
+                          color: Color.fromARGB(255, 111, 106, 106),
+                        ),
+                      ),
+                      Text(
+                        "Hobbies",
+                      ),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Text(
+                        "Traveling, Reading, Coding",
+                        style: TextStyle(fontSize: 12),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 6,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(double.infinity, 40)),
+                  onPressed: () {},
+                  icon: const Icon(Icons.send),
+                  label: const Text("Contact Me")),
             )
           ],
         ),
