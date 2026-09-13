@@ -1,4 +1,4 @@
-import 'dart:math';
+// import 'dart:math';
 
 import 'package:flutter/material.dart';
 
@@ -6,7 +6,8 @@ Map<String, dynamic> user = {
   "age": 20,
   "nationality": "American",
   "email": "zlah@gmail.com",
-  "job": "Frontend Developer"
+  "job": "Frontend Developer",
+  "education": null
 };
 
 class UserInformationApp extends StatefulWidget {
@@ -100,9 +101,7 @@ class _UserInformationAppState extends State<UserInformationApp> {
                       const Text(
                         "age",
                       ),
-                      const SizedBox(
-                        width: 90,
-                      ),
+                      const Spacer(),
                       Text("${user["age"]}"),
                     ],
                   ),
@@ -123,9 +122,7 @@ class _UserInformationAppState extends State<UserInformationApp> {
                         "Nationality",
                         style: TextStyle(fontSize: 16),
                       ),
-                      const SizedBox(
-                        width: 35,
-                      ),
+                      const Spacer(),
                       Text(
                         "${user["nationality"]}",
                         style: const TextStyle(fontSize: 16),
@@ -148,9 +145,7 @@ class _UserInformationAppState extends State<UserInformationApp> {
                       const Text(
                         "Email",
                       ),
-                      const SizedBox(
-                        width: 75,
-                      ),
+                      const Spacer(),
                       Text(
                         "${user["email"]}",
                         style: const TextStyle(fontSize: 16),
@@ -174,9 +169,7 @@ class _UserInformationAppState extends State<UserInformationApp> {
                         "Job",
                         style: TextStyle(fontSize: 16),
                       ),
-                      const SizedBox(
-                        width: 80,
-                      ),
+                      const Spacer(),
                       Text(
                         "${user["job"]}",
                         style: const TextStyle(fontSize: 16),
@@ -309,12 +302,12 @@ class _UserInformationAppState extends State<UserInformationApp> {
                     )
                   ],
                   borderRadius: BorderRadius.circular(12)),
-              child: const Column(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Row(
                     children: [
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.only(right: 12),
                         child: Icon(
                           Icons.school,
@@ -322,18 +315,15 @@ class _UserInformationAppState extends State<UserInformationApp> {
                           color: Color.fromARGB(255, 111, 106, 106),
                         ),
                       ),
-                      Text(
-                        "Eduction",
-                      ),
-                      SizedBox(
-                        width: 90,
-                      ),
+                      const Text("Education"),
+                      const Spacer(),
+                      Text("${user["education"]}"),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Padding(
                         padding: EdgeInsets.only(right: 12),
@@ -356,10 +346,10 @@ class _UserInformationAppState extends State<UserInformationApp> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Padding(
                         padding: EdgeInsets.only(right: 12),
