@@ -18,7 +18,7 @@ class _InteractiveCounterState extends State<InteractiveCounter> {
         title: const Text("Interactive Counter"),
       ),
       body: Container(
-        color: Colors.black,
+        color: const Color.fromARGB(255, 216, 211, 211),
         width: double.infinity,
         height: double.infinity,
         padding: const EdgeInsets.all(20),
@@ -105,21 +105,57 @@ class _InteractiveCounterState extends State<InteractiveCounter> {
                               counter--;
                             });
                           }),
-                    )
+                    ),
                   ],
                 ),
-                Expanded(
-                  child: CounterButton(
-                      height: 40,
-                      text: "Reset",
-                      icon: Icons.refresh,
-                      backgroundColor: const Color.fromARGB(255, 157, 14, 14),
-                      onPressed: () {
-                        setState(() {
-                          counter = 0;
-                        });
-                      }),
-                )
+                const SizedBox(
+                  height: 16,
+                ),
+                SizedBox(
+                  height: 80,
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      setState(() {
+                        counter = 0;
+                      });
+                    },
+                    icon: const Icon(
+                      Icons.refresh,
+                      size: 36,
+                    ),
+                    label: const Text(
+                      "Reset",
+                      style: TextStyle(fontSize: 24),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                            const Color.fromARGB(255, 154, 33, 207),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12))),
+                  ),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                Container(
+                  height: 80,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 229, 228, 225),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Center(
+                    child: Text(
+                      counter == 0
+                          ? "Neutral"
+                          : counter > 0
+                              ? "Positive"
+                              : "Negative",
+                      style: const TextStyle(
+                          fontSize: 24, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
