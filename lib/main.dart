@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/projects/day_6_text_input_form/TextInputForm.dart';
+import 'package:flutter_learning/projects/day_7_multi_screen_profile/MyProfile.dart';
+// import 'package:flutter_learning/projects/day_6_text_input_form/TextInputForm.dart';
 // import 'package:flutter_learning/projects/day_5_interactive_counter/InteractiveCounter.dart';
 // import 'package:flutter_learning/projects/day_4_user_information_app/day_4_user_information_app.dart';
 // import 'package:flutter_learning/projects/day_1_profile_card/ProfileCard.dart';
@@ -23,18 +24,20 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData.light(),
-        darkTheme: ThemeData.dark(),
-        themeMode: isSwitched ? ThemeMode.dark : ThemeMode.light,
-        debugShowCheckedModeBanner: false,
-        title: 'zac',
-        home: TextInputForm(
-          isdarkMode: isSwitched,
-          onDarkMode: () {
-            setState(() {
-              isSwitched = !isSwitched;
-            });
-          },
-        ));
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: isSwitched ? ThemeMode.dark : ThemeMode.light,
+      debugShowCheckedModeBanner: false,
+      title: 'zac',
+      home: const MyProfile(),
+      // home: TextInputForm(
+      //   isdarkMode: isSwitched,
+      //   onDarkMode: () {
+      //     setState(() {
+      //       isSwitched = !isSwitched;
+      //     });
+      //   },
+      // )
+    );
   }
 }
