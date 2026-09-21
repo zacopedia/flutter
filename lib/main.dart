@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/projects/day_7_multi_screen_profile/MyProfile.dart';
+import 'package:flutter_learning/projects/day_7_multi_screen_profile/ProfileScreen.dart';
+// import 'package:flutter_learning/projects/day_7_multi_screen_profile/HomeScreen.dart';
 // import 'package:flutter_learning/projects/day_6_text_input_form/TextInputForm.dart';
 // import 'package:flutter_learning/projects/day_5_interactive_counter/InteractiveCounter.dart';
 // import 'package:flutter_learning/projects/day_4_user_information_app/day_4_user_information_app.dart';
@@ -29,7 +30,7 @@ class _MyAppState extends State<MyApp> {
       themeMode: isSwitched ? ThemeMode.dark : ThemeMode.light,
       debugShowCheckedModeBanner: false,
       title: 'zac',
-      home: const MyProfile(),
+      home: const ProfileScreen(),
       // home: TextInputForm(
       //   isdarkMode: isSwitched,
       //   onDarkMode: () {

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/widgets/DecorativeBlob.dart';
 
-class MyProfile extends StatefulWidget {
-  const MyProfile({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<MyProfile> createState() => _MyProfileState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _MyProfileState extends State<MyProfile> {
+class _HomeScreenState extends State<HomeScreen> {
   bool isOnline = false;
   int selectedIndex = 0;
   @override
