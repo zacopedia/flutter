@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/projects/day_7_multi_screen_profile/home_screen.dart';
 import 'package:lottie/lottie.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -35,7 +34,13 @@ class _WelcomePageState extends State<WelcomePage> {
               height: 21,
             ),
             FilledButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return const HomeScreen();
+                    },
+                  ));
+                },
                 style: FilledButton.styleFrom(
                     minimumSize: const Size(double.infinity, 50),
                     backgroundColor: const Color.fromARGB(255, 242, 149, 20)),
