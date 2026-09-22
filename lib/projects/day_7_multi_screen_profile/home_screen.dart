@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/widgets/DecorativeBlob.dart';
+import 'package:flutter_learning/projects/day_7_multi_screen_profile/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -281,6 +282,12 @@ class _HomeScreenState extends State<HomeScreen> {
             indicatorColor: Colors.amber,
             selectedIndex: selectedIndex,
             onDestinationSelected: (index) {
+              if (index == 1) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProfileScreen()));
+              }
               setState(() {
                 selectedIndex = index;
               });

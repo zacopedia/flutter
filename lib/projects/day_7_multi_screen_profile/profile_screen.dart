@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_learning/widgets/DecorativeBlob.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -41,6 +42,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 height: 200,
                                 color: Color(0xFF13B9FD),
                                 opacity: 0.18,
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              icon: const Icon(
+                                Icons.arrow_back,
+                                color: Colors.white,
                               ),
                             ),
                             const Positioned(
