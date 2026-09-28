@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/projects/day_8_welcome_page/welcome_page.dart';
+import 'package:flutter_learning/projects/day_9_todo_list/todo_list.dart';
+// import 'package:flutter_learning/projects/day_8_welcome_page/welcome_page.dart';
 // import 'package:flutter_learning/projects/day_7_multi_screen_profile/ProfileScreen.dart';
 // import 'package:flutter_learning/projects/day_7_multi_screen_profile/home_screen.dart';
 // import 'package:flutter_learning/projects/day_6_text_input_form/TextInputForm.dart';
@@ -25,13 +26,20 @@ class _MyAppState extends State<MyApp> {
   bool isSwitched = false;
   @override
   Widget build(BuildContext context) {
+    const appTextTheme = TextTheme(
+        headlineMedium: TextStyle(
+          fontSize: 32,
+          fontWeight: FontWeight.w600,
+        ),
+        bodyMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.normal));
     return MaterialApp(
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+      theme: ThemeData.light().copyWith(textTheme: appTextTheme),
+      darkTheme: ThemeData.dark().copyWith(textTheme: appTextTheme),
       themeMode: isSwitched ? ThemeMode.dark : ThemeMode.light,
+
       debugShowCheckedModeBanner: false,
       title: 'zac',
-      home: const WelcomePage(),
+      home: const TodoList(),
       // home: TextInputForm(
       //   isdarkMode: isSwitched,
       //   onDarkMode: () {

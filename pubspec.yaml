@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/dashboard_mountain_background.png
     - assets/my_profile.png
+    - assets/images/todolist.png
     - assets/lotties/welcome.json
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/projects/day_4_user_information_app/day_4_user_information_app.dart';
 import 'package:flutter_learning/widgets/DecorativeBlob.dart';
 import 'package:flutter_learning/projects/day_7_multi_screen_profile/profile_screen.dart';
+import 'package:flutter_learning/projects/day_2_settings_page/SettingsPage.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -287,6 +289,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ProfileScreen()));
+              } else if (index == 2) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SettingsPage()));
+              } else if (index == 3) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const UserInformationApp()));
               }
               setState(() {
                 selectedIndex = index;
